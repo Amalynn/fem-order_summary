@@ -2,7 +2,7 @@
 @use '../utils/mixins' as m;
 
 body {
-    background-image: url("/public/images/pattern-background-mobile.svg");
+    background-image: url("./public/images/pattern-background-mobile.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;    
@@ -17,7 +17,7 @@ body {
     align-items: center;
 
     @include m.media-breakpoint-up(mobile){
-        background-image: url("/public/images/pattern-background-desktop.svg");    
+        background-image: url("./public/images/pattern-background-desktop.svg");    
     }
 }
 
