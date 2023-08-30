@@ -1,0 +1,59 @@
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+@use '../utils/variables' as var;
+
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var.$very-pale-blue;
+    border-radius: f.pxToRem(11);   
+    padding: 1rem;
+    margin-bottom: f.pxToRem(24);
+
+    @include m.media-breakpoint-up(mobile){
+        margin-bottom: f.pxToRem(32);
+    }
+    
+    
+    &__img {
+        height: f.pxToRem(48);
+        width: f.pxToRem(48);
+    }
+    
+
+    &__price {
+        margin-left: 1rem;
+        
+        h3 {
+            @include m.typo-plan("black",14, var.$dark-blue);
+
+            @include m.media-breakpoint-up(mobile){
+                font-size: 1rem;
+            }
+        }
+        
+        p {
+            @include m.typo-plan("medium",14, var.$desaturated-blue);
+
+            @include m.media-breakpoint-up(mobile){
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__change {
+        @include m.typo-plan("bold", 13, var.$color-primary);
+
+        @include m.media-breakpoint-up(mobile){
+            font-size: 0.875rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: var.$color-primary-hover;
+        }
+    }
+    
+}

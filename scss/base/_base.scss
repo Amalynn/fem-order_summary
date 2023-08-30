@@ -1,0 +1,27 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as m;
+
+body {
+    background-image: url("/public/images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;    
+    background-color: var.$color-secondary;
+    width: 100vw;
+    height: 100vh;
+    font-family: var.$red-hat ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.media-breakpoint-up(mobile){
+        background-image: url("/public/images/pattern-background-desktop.svg");    
+    }
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,59 @@
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+@use '../utils/variables' as var;
+
+.card {
+    background-color: var.$white;
+    width: f.pxToRem(327);
+    border-radius: f.pxToRem(20) ;
+    overflow: hidden;
+    margin-bottom: f.pxToRem(15);
+    box-shadow: 0px 20px 10px -7px rgba(214,225,255,1);
+
+    @include m.media-breakpoint-up(mobile){
+        width: f.pxToRem(450);       
+    }
+
+    &-header {
+        width: 100%;
+        height: f.pxToRem(160);        
+
+        @include m.media-breakpoint-up(mobile){
+            height: f.pxToRem(220);
+        }
+
+        img {
+            height: auto;
+            width: 100%;            
+        }
+    }
+
+    &-body {
+        padding: f.pxToRem(38) f.pxToRem(25);
+        text-align: center;
+
+        @include m.media-breakpoint-up(mobile){
+            padding-top: f.pxToRem(53);
+            padding-bottom: f.pxToRem(53);
+        }
+
+        &__title{
+            @include m.typo-order-title;
+            margin-bottom: f.pxToRem(16);
+        }
+
+        &__description {
+            @include m.typo-order-description;
+            margin-top: 0;
+            margin-bottom: f.pxToRem(24);
+            padding-left: f.pxToRem(8);
+            padding-right: f.pxToRem(8);
+
+            @include m.media-breakpoint-up(mobile) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+    }
+}
+

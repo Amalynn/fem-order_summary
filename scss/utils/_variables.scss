@@ -1,0 +1,28 @@
+@use './functions' as f;
+
+// Colors system
+$color-primary: hsl(245, 75%, 52%) ;
+$color-secondary: hsl(225, 100%, 94%) ;
+
+$very-pale-blue: hsl(228, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$white: hsl(0, 0%, 100%);
+
+$color-primary-hover: hsl(245, 83%, 68%);
+
+
+// Fonts 
+$red-hat: 'Red Hat Display', sans-serif;
+
+$fonts-weights: (
+    "medium": 500,
+    "bold": 700,
+    "black": 900
+);
+
+// Breakpoints Media queries
+$breakpoints-up: (
+    "mobile": f.pxToEm(480),
+    "desktop": f.pxToEm(1440)
+);

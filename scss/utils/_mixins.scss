@@ -1,0 +1,36 @@
+@use './functions' as f;
+@use './variables' as var;
+
+// Media Queries
+@mixin media-breakpoint-up ($size) {
+    @media only screen and (min-width: map-get(var.$breakpoints-up, $size) ) {
+        @content;
+    }
+}
+
+// Typography
+@mixin typo-order-title($font-sizes: f.pxToRem(22)) {
+    font-weight: map-get($map: var.$fonts-weights , $key: "black");
+    font-size: $font-sizes ;
+    color: var.$dark-blue;
+}
+
+@mixin typo-order-description {
+    font-weight: map-get($map: var.$fonts-weights , $key: "medium");
+    font-size: f.pxToRem(15);
+    line-height: f.pxToRem(25);
+    color: var.$desaturated-blue;
+}
+
+@mixin typo-btn($font-sizes: f.pxToRem(15), $font-colors: var.$white) {
+    font-weight: map-get($map: var.$fonts-weights, $key:"black" );
+    font-size: $font-sizes;
+    color: $font-colors;
+}
+
+@mixin typo-plan ($weight, $size, $font-colors) {
+    font-weight: map-get($map: var.$fonts-weights, $key: $weight );
+    font-size: f.pxToRem($size);
+    color: $font-colors;
+}
+
