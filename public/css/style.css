@@ -28,10 +28,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-image: url("/public/images/pattern-background-mobile.svg");
+  background-image: url("../../public/images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: auto;
+  background-size: contain;
   background-color: hsl(225deg, 100%, 94%);
   width: 100vw;
   height: 100vh;
@@ -43,7 +43,7 @@ body {
 }
 @media only screen and (min-width: 30em) {
   body {
-    background-image: url("/public/images/pattern-background-desktop.svg");
+    background-image: url("../../public/images/pattern-background-desktop.svg");
   }
 }
 
